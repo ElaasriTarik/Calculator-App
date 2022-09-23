@@ -9,10 +9,25 @@
   --light-greyish-key: hsl(30, 25%, 89%);
   --light-greyish-shadow: hsl(28, 16%, 65%);
   --dark-blur-shadow: hsl(224, 28%, 35%);
+
+  --Light-gray: hsl(0, 0%, 90%);
+  --Grayish-red: hsl(0, 5%, 81%);
+  --Very-light-gray: hsl(0, 0%, 93%);
+  #### Keys
+  --Dark-moderate-cyan: hsl(185, 42%, 37%);
+  --Very-dark-cyan: hsl(185, 58%, 25%);
+
+  --Orange: hsl(25, 98%, 40%);
+  --Dark-orange-: hsl(25, 99%, 27%);
+
+  --Light-grayish-yellow: hsl(45, 7%, 89%);
+  --Dark-grayish-orange: hsl(35, 11%, 61%);
 }
 * {
   box-sizing: border-box;
   font-family: Trebuchet MS;
+  outline: 0px solid red;
+  transition: background-color 350ms ease-out;
 }
 
 body {
@@ -42,6 +57,7 @@ body {
   color: white;
   padding-left: 20px;
   font-size: 25px;
+  font-weight: 700;
 }
 .buttons {
   width: 90%;
@@ -91,5 +107,70 @@ body {
   background-color: var(--key-background);
   color: white;
   box-shadow: 0 2px 0 var(--key-shadow);
-
+}
+.head {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.head h2 {
+  font-size: 17px;
+  color: white;
+}
+.head h3 {
+  font-size: 10px;
+  color: white;
+  align-self: flex-end;
+  padding: 0;
+}
+.themes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.choseTheme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+width: 80px;
+}
+.choseTheme ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -16px;
+  list-style: none;
+  gap:10px;
+}
+.choseTheme ul li {
+  font-size: 13px;
+  color: white;
+}
+.choseTheme .tape {
+  width: 45px;
+  height: 13px;
+  border-radius: 500px;
+  background-color: var(--screen-background);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.choseTheme span {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  align-self: center;
+  left: calc(0% + 2px);
+  background-color: var(--red-key-background-t);
+  cursor: pointer;
+  transition: left 350ms ease-out;
 }
