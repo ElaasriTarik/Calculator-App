@@ -28,8 +28,18 @@ let arr = [];
           rScreen.value = 'I love you Miranda.';
         }, 6000)
         setTimeout(() => {
-          rScreen.value = '';
-        }, 14000) 
+          rScreen.value = 'Click on 1...';
+          keys.forEach(item => {
+            item.addEventListener('click', (e) => {
+            if (e.target.value == '1') {
+              rScreen.value = 'I love you too Tarek!';
+              setTimeout(() => {
+                rScreen.value = 'Hahahahahaha';
+              }, 3000)
+            }
+          })
+          })
+        }, 9000) 
        }
        let string = rScreen.value;
        arr = [...string];
