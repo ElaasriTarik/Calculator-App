@@ -19,28 +19,7 @@ let arr = [];
      if (e.target.value === '=') {
       rScreen.style.fontSize = '13px';
        rScreen.value = eval(rScreen.value);
-       if (eval(rScreen.value) == '11.11') {
-        rScreen.value = 'I see that you found the secret door.';
-        setTimeout(() => {
-          rScreen.value = 'well then, all I wanna say is...';
-        }, 3000)
-        setTimeout(() => {
-          rScreen.value = 'I love you Miranda.';
-        }, 6000)
-        setTimeout(() => {
-          rScreen.value = 'Click on 1...';
-          keys.forEach(item => {
-            item.addEventListener('click', (e) => {
-            if (e.target.value == '1') {
-              rScreen.value = 'I love you too Tarek!';
-              setTimeout(() => {
-                rScreen.value = 'Hahahahahaha';
-              }, 3000)
-            }
-          })
-          })
-        }, 9000) 
-       }
+
        let string = rScreen.value;
        arr = [...string];
      } else if (e.target.value === 'reset') {
